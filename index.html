@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+  <html lang="en">
+    <head>
+    <meta charset="utf-8">
+      <title>Web App</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="apple-mobile-web-app-capable" content="yes">
+      <meta name="application-name" content="Web App">
+      <meta name="theme-color" content="#3367D6">
+      <link href = "manifest.json" rel = "manifest">
+      <link rel="icon" sizes="16x16 32x32 256x256" href="images/icons/pwsk-16.png">
+      <link rel="icon" sizes="512x512" href="images/icons/pwsk-512.png">
+      <link rel="apple-touch-icon-precomposed" sizes="192x192" href="images/icons/pwsk-192.png">
+      <link href="css/style.css" type="text/css" rel="stylesheet">
+      <link href = "css/materialize.min.css" rel = "stylesheet" type = "text/css">
+      <!--Let browser know website is optimized for mobile-->
+    </head>
+
+    <body>
+    <!-- Navigasi -->
+    <nav class="gradient-45deg-light-blue-cyan" role="navigation">
+      <div class="nav-wrapper container">
+        <a href="#" class="brand-logo" id="logo-container">Wiska</a>
+        <a href="#" class="sidenav-trigger" data-target="nav-mobile">&#9776;</a>
+
+        <ul class="topnav right hide-on-med-and-down"></ul>
+        <ul class="sidenav" id="nav-mobile"></ul>
+      </div>
+    </nav>
+    <!-- Akhir Navigasi -->
+    <div class="container" id="body-content">
+
+    </div>
+
+    <!-- START FOOTER -->
+    <footer class="page-footer gradient-45deg-light-blue-cyan">
+      <div class="footer-copyright">
+        <div class="container">
+        <span class="right hide-on-small-only"> Copyright © Design and Developed by <a class="grey-text text-lighten-2" href="index.html">PIXINVENT</a></span>
+        </div>
+      </div>
+    </footer>
+    <!-- END FOOTER -->
+
+      <!--JavaScript at end of body for optimized loading-->
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script type = "text/javascript" href="js/script.js"></script>
+    <script src="js/nav.js"></script>
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script type = "text/javascript">
+
+      if ("serviceWorker" in navigator) {
+
+        navigator.serviceWorker.register("./web-app-service.js", { scope: "./" }).then(function(registration) {
+          console.log("Pendaftaran ServiceWorker berhasil");
+        }).catch(function(error) {
+
+          alert("Could not register service worker! This application will not be able to run in offline mode.");
+          alert(error);
+
+        });
+      }
+
+    </script>
+    </body>
+  </html>
