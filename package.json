@@ -1,0 +1,21 @@
+{
+  "name": "pwa-app",
+  "version": "1.0.0",
+  "description": "pwa-web-app",
+  "main": "server.js",
+  "scripts": {
+    "test": "hello manis",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "pwa",
+    "web",
+    "app"
+  ],
+  "author": "jhoe",
+  "license": "ISC",
+  "dependencies": {
+    "jquery": "^3.5.1"
+  },
+  "devDependencies": {}
+}
